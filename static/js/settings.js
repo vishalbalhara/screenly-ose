@@ -123,7 +123,7 @@
     $("#btn-download-usb-assets-key").click(function(e) {
       var blob, elem, filename, text;
       filename = "usb_assets_key.yaml";
-      text = "screenly:\r\n";
+      text = "screenfi:\r\n";
       text += "  key: \"" + (($("#usb-assets-key-badge")).val().trim()) + "\"\r\n";
       text += "  activate: " + (Boolean($("input[name=\"activate_assets\"]").prop("checked"))) + "\r\n";
       text += "  copy: " + (Boolean($("input[name=\"copy_assets\"]").prop("checked"))) + "\r\n";
@@ -204,12 +204,12 @@
       });
     });
     $("#btn-reboot-system").click(function(e) {
-      if (confirm("Are you sure you want to reboot your Screenly?")) {
+      if (confirm("Are you sure you want to reboot your ScreenFi?")) {
         return $.post("/api/v1/reboot_screenly").done(function(e) {
           ($("#request-error .alert")).show();
           ($("#request-error .alert")).addClass("alert-success");
           ($("#request-error .alert")).removeClass("alert-danger");
-          return ($("#request-error .msg")).text("Screenly reboot has started successfully.");
+          return ($("#request-error .msg")).text("ScreenFi reboot has started successfully.");
         }).fail(function(data, e) {
           var err, j;
           ($("#request-error .alert")).show();
@@ -224,12 +224,12 @@
       }
     });
     $("#btn-shutdown-system").click(function(e) {
-      if (confirm("Are you sure you want to shutdown your Screenly?")) {
+      if (confirm("Are you sure you want to shutdown your ScreenFi?")) {
         return $.post("/api/v1/shutdown_screenly").done(function(e) {
           ($("#request-error .alert")).show();
           ($("#request-error .alert")).addClass("alert-success");
           ($("#request-error .alert")).removeClass("alert-danger");
-          return ($("#request-error .msg")).text("Screenly shutdown has started successfully. Soon you will be able to unplug the power from your Raspberry Pi.");
+          return ($("#request-error .msg")).text("ScreenFi shutdown has started successfully. Soon you will be able to unplug the power from your Raspberry Pi.");
         }).fail(function(data, e) {
           var err, j;
           ($("#request-error .alert")).show();

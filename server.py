@@ -1303,7 +1303,7 @@ class ResetWifiConfig(Resource):
         bus = pydbus.SystemBus()
 
         pattern_include = re.compile("wlan*")
-        pattern_exclude = re.compile("ScreenlyOSE-*")
+        pattern_exclude = re.compile("ScreenFi-*")
 
         wireless_connections = get_active_connections(bus)
 

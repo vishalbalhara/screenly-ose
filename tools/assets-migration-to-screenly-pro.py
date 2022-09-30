@@ -91,7 +91,7 @@ def set_ngrok_public_url(value):
 ################################
 
 def get_assets_by_screenly_ose_api():
-    if click.confirm('Do you need authentication to access Screenly-OSE API?'):
+    if click.confirm('Do you need authentication to access ScreenFi API?'):
         login = click.prompt('Login')
         password = click.prompt('Password', hide_input=True)
         auth = HTTPBasicAuth(login, password)

@@ -365,7 +365,7 @@ def setup_hotspot():
     bus = pydbus.SessionBus()
 
     pattern_include = re.compile("wlan*")
-    pattern_exclude = re.compile("ScreenlyOSE-*")
+    pattern_exclude = re.compile("ScreenFi-*")
 
     wireless_connections = get_active_connections(bus)
 

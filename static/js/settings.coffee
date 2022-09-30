@@ -106,7 +106,7 @@ $().ready ->
   $("#btn-download-usb-assets-key").click (e) ->
     filename = "usb_assets_key.yaml"
 
-    text = "screenly:\r\n"
+    text = "screenfi:\r\n"
     text += "  key: \"#{($("#usb-assets-key-badge")).val().trim()}\"\r\n"
     text += "  activate: #{Boolean($("input[name=\"activate_assets\"]").prop "checked")}\r\n"
     text += "  copy: #{Boolean($("input[name=\"copy_assets\"]").prop "checked")}\r\n"
